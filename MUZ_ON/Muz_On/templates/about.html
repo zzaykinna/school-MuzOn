@@ -1,0 +1,206 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Playfair+Display&display=swap" rel="stylesheet">
+    <title>Muz On</title>
+</head>
+<body>
+<style>
+    body{
+    height: 15vw;
+    background:#000;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    line-height: 1.6;
+     color: #fff;
+    }
+    *,
+    *:before,
+    *:after{
+        box-sizing: border-box;
+    }
+
+
+
+    /* container */
+    .container{
+        width: 100%;
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+
+    div.background {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.5;
+      }
+
+    /* intro */
+    .intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100vw;
+        height: 50vw;
+        background-image: url("{%static 'img/гитара_dark.png'%}");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .intro_inner{
+        width: 100vw;
+        max-width: 130vw;
+    }
+
+    .intro_title{
+        margin-left: 5vw;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 0.1em;
+        padding-top: 15vw;
+        font-size: 1.4vw;
+    }
+
+    /* header */
+    .header_inner{
+        font-weight: bolder;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    header{
+        width: 10vw;
+        background: #000;
+        height: 5vw;
+        opacity: 0.8;
+    }
+
+    .header{
+        padding-top: 0.5vw;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+
+    /* nav */
+    .nav{
+        font-size: 1.3vw;
+    }
+
+    .nav_link{
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 1vw;
+        color: #fff;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: color .3s linear;
+        padding: 1vw 2vw;
+        position: relative;
+        display: inline-block;
+        transition: all .3s linear;
+    }
+    .nav_link:hover{
+        text-decoration: none;
+        color:#F84914;
+    }
+
+     .footer_inner{
+        margin-left: 4vw;
+        margin-right: 4vw;
+        font-weight: lighter;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer{
+        width: 100vw;
+        background: #000;
+        height: 5.5vw;
+        opacity: 0.8;
+
+    }
+
+     .element::-webkit-scrollbar {
+        width: 0;
+      }
+
+      /*Убрать полосу прокрутки для всей страницы*/
+      ::-webkit-scrollbar {
+        width: 0;
+      }
+</style>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header_inner">
+                <div>
+                    <img class="header_logo" src="{%static 'img/лого.svg'%}">
+                    <style>
+                        .header_logo{
+                            position: relative;
+                            height: 4.5vw;
+                            width: 4.5vw;
+                        }
+                    </style>
+                </div>
+                <nav class="nav">
+
+                    <a class="nav_link" href="/">На главную</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="intro">
+            <h2 class="intro_title" style="text-align: left;">Muz On <br> Школа работает с 2015 года и за это время <br> у нас было много достижений. <br> Каждый ученик добился успеха в своей <br> творческой деятельности. <br> Приходите в нашу школу, и вы останетесь <br> довольны своими достижениями!</h2>
+             <div class="slider">
+                    <style>
+                        .slider{
+                            top: -20vw;
+                            /* Положение элемента устанавливается относительно его исходной позиции: */
+                            position: relative;
+                            /* Центрируем по горизонтали: */
+                            margin-left: 60vw;
+                            height: 30vw;
+                          }
+
+                          /* Картинка масштабируется по отношению к родительскому элементу: */
+                          .slider .item img {
+                            /* Элемент меняет размер так, чтобы заполнить блок и сохранить пропорции: */
+                            object-fit: cover;
+                            width: 50vw;
+                            height: 30vw;
+                          }
+                    </style>
+            <div style="position:relative;overflow:hidden;">
+                <a href="https://yandex.ru/maps/192/vladimir/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Владимир</a>
+                <a href="https://yandex.ru/maps/192/vladimir/house/dvoryanskaya_ulitsa_27ak7/YEkYdQ9pSEUHQFtsfX1zdHVkZg==/?indoorLevel=1&ll=40.389100%2C56.125972&utm_medium=mapframe&utm_source=maps&z=16.64" style="color:#eee;font-size:12px;position:absolute;top:14px;">Дворянская улица, 27Ак7 — Яндекс Карты</a>
+                <iframe src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=40.389100%2C56.125972&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNDQzNDI3NzMxEkjQoNC-0YHRgdC40Y8sINCS0LvQsNC00LjQvNC40YAsINCU0LLQvtGA0Y_QvdGB0LrQsNGPINGD0LvQuNGG0LAsIDI30JDQujciCg1vjiFCFf-AYEI%2C&z=16.64" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative; "></iframe>
+            </div>
+             </div>
+        </div>
+    </div>
+<footer class="footer">
+ <div class="footer_inner">
+                <p>MuzOn<br>музыкальная школа</p>
+                <p>Мы всегда с вами на связи<br>+7 (967) 355-60-44</p>
+            </div>
+</footer>
+</body>
+</html>
